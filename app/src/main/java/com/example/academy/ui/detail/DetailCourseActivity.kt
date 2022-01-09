@@ -22,12 +22,12 @@ class DetailCourseActivity : AppCompatActivity() {
         const val EXTRA_COURSE = "extra_course"
     }
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var detailContentBinding: ContentDetailCourseBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val activityDetailCourseBinding = ActivityDetailCourseBinding.inflate(layoutInflater)
+        detailContentBinding = activityDetailCourseBinding.detailContent
         setContentView(activityDetailCourseBinding.root)
         setSupportActionBar(activityDetailCourseBinding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

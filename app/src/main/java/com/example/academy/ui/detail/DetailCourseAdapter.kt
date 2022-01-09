@@ -18,9 +18,7 @@ class DetailCourseAdapter : RecyclerView.Adapter<DetailCourseAdapter.ModuleViewH
     inner class ModuleViewHolder(private val binding: ItemsModuleListBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(module: ModuleEntity) {
-            fun bind(module: ModuleEntity) {
-                binding.textModuleTitle.text = module.title
-            }
+            binding.textModuleTitle.text = module.title
         }
     }
 
