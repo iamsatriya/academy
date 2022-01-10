@@ -14,6 +14,8 @@ import com.example.academy.utils.DataDummy
 
 class BookmarkFragment : Fragment(), BookmarkFragmentCallback {
 
+    // TODO FIXED BOOKMARK NOT SHOW
+
     lateinit var fragmentBookmarkBinding: FragmentBookmarkBinding
 
     override fun onCreateView(
@@ -42,8 +44,9 @@ class BookmarkFragment : Fragment(), BookmarkFragmentCallback {
     override fun onShareClick(course: CourseEntity) {
         if (activity != null) {
             val mimeType = "text/plain"
-            ShareCompat.IntentBuilder(requireContext())
-//                .from(requireActivity())
+//            ShareCompat.IntentBuilder(requireActivity())
+            ShareCompat.IntentBuilder
+                .from(requireActivity())
                 .setType(mimeType)
                 .setChooserTitle("Bagikan aplikasi ini sekarang.")
                 .setText(resources.getString(R.string.share_text, course.title))
